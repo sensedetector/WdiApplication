@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Width match_parent + Height match_parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <sensedetector.wdi.application.views.SquareImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:src="@drawable/rubberduck"
+        android:tag="MatchMatch"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/rubberduck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Width match_parent + Height wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <sensedetector.wdi.application.views.SquareImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:src="@drawable/rubberduck"
+        android:tag="MatchWrap"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/rubberduck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Width wrap_content + Height wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <sensedetector.wdi.application.views.SquareImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:src="@drawable/rubberduck"
+        android:tag="WrapWrap"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/rubberduck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Width wrap_content + Height 100dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <sensedetector.wdi.application.views.SquareImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/rubberduck"
+        android:tag="WidthWrap+Height100"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/rubberduck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Width 50dp + Height 100dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <sensedetector.wdi.application.views.SquareImageView
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/rubberduck"
+        android:tag="Width50+Height100"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/rubberduck" />
+
+</merge>

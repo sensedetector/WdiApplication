@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_bags"
+        android:icon="@drawable/bag_icon"
+        android:title="@string/title_bags" />
+
+    <item
+        android:id="@+id/navigation_toys"
+        android:icon="@drawable/toys"
+        android:title="@string/title_toys" />
+
+    <item
+        android:id="@+id/navigation_transformers"
+        android:icon="@drawable/autobot"
+        android:title="@string/title_transformers" />
+
+    <item
+        android:id="@+id/navigation_dragons"
+        android:icon="@drawable/unicorn_icon"
+        android:title="@string/title_dragons" />
+
+</menu>

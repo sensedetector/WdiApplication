@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WdiApplication</string>
+    <string name="title_bags">Bags</string>
+    <string name="title_toys">Toys</string>
+    <string name="title_transformers">Transformers</string>
+    <string name="title_dragons">Unicorns</string>
+
+    <!-- Toys section strings-->
+    <string name="rubber_duck_title">Square Icon</string>
+    <string name="rubber_duck_subtitle">Is rubber duck a square? What about this space on the right?</string>
+
+    <!-- Transformers section strings-->
+    <string name="transformer_title">Transformer Layout</string>
+    <string name="transformer_subtitle">I can layout this on my own!</string>
+
+    <!-- Unicorn strings-->
+    <string name="make_ripple_button">Make a Ripple!</string>
+</resources>
