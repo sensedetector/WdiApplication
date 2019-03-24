@@ -23,6 +23,6 @@ class RubberDuckFragment: Fragment() {
 
         itemSquareView.setIcon(resources.getDrawable(R.drawable.rubberduck, null))
         itemSquareView.setTitle(resources.getString(R.string.rubber_duck_title))
-        itemSquareView.setSubtitle(resources.getString(R.string.rubber_duck_title))
+        itemSquareView.setSubtitle(resources.getString(R.string.rubber_duck_subtitle))
     }
 }

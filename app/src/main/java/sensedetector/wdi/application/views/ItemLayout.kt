@@ -61,45 +61,41 @@ class ItemLayout @JvmOverloads constructor(
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-
-        // Measure description view first time to get height.
+        // Measure description view first time to get height. Do it as long as height is stable.
         var heightMeasured: Int
+        var lp = descriptionView.layoutParams as ViewGroup.MarginLayoutParams
+        val descriptionTopDownMargin = lp.topMargin + lp.bottomMargin
         do {
-            val lp = descriptionView.layoutParams as ViewGroup.MarginLayoutParams
-            heightMeasured = descriptionView.measuredHeight + lp.topMargin + lp.bottomMargin
-            measureChildWithMargins(descriptionView, widthMeasureSpec, heightMeasured, heightMeasureSpec, 0)
-        } while (heightMeasured != descriptionView.measuredHeight + lp.topMargin + lp.bottomMargin)
+            heightMeasured = descriptionView.measuredHeight + descriptionTopDownMargin
+            measureChildWithMargins(descriptionView,
+                widthMeasureSpec, heightMeasured,
+                heightMeasureSpec, 0)
+        } while (heightMeasured != descriptionView.measuredHeight + descriptionTopDownMargin)
 
-        var lp = squareView.layoutParams as ViewGroup.MarginLayoutParams
+        lp = squareView.layoutParams as ViewGroup.MarginLayoutParams
+        heightMeasured -= lp.topMargin + lp.bottomMargin
 
         // Measure square view
-        measureChildWithMargins(
+        measureChild(
             squareView,
-            // Pass width constraints and width already used.
-            MeasureSpec.makeMeasureSpec(heightMeasured - lp.leftMargin - lp.rightMargin, MeasureSpec.EXACTLY), 0,
-            // Pass height constraints and height already used.
-            MeasureSpec.makeMeasureSpec(heightMeasured - lp.topMargin - lp.bottomMargin, MeasureSpec.EXACTLY), 0
+            MeasureSpec.makeMeasureSpec(heightMeasured, MeasureSpec.EXACTLY),
+            MeasureSpec.makeMeasureSpec(heightMeasured, MeasureSpec.EXACTLY)
         )
 
-        // Calculate this view's measured width and height.
-
-        // Figure out how much total space the icon used.
+        // Figure out how much total space the square used.
         lp = squareView.layoutParams as ViewGroup.MarginLayoutParams
         val iconWidth = squareView.measuredWidth + lp.leftMargin + lp.rightMargin
         val iconHeight = squareView.measuredHeight + lp.topMargin + lp.bottomMargin
 
-        // Figure out how much total space the title used.
+        // Figure out how much total space the description used.
         lp = descriptionView.layoutParams as ViewGroup.MarginLayoutParams
         val titleWidth = descriptionView.measuredWidth + lp.leftMargin + lp.rightMargin
         val titleHeight = descriptionView.measuredHeight + lp.topMargin + lp.bottomMargin
 
-
         // The width taken by the children + padding.
-        val width = paddingTop + paddingBottom +
-                iconWidth + titleWidth
+        val width = paddingLeft + paddingRight + iconWidth + titleWidth
         // The height taken by the children + padding.
-        val height = paddingTop + paddingBottom +
-                Math.max(iconHeight, titleHeight)
+        val height = paddingTop + paddingBottom + Math.max(iconHeight, titleHeight)
 
         // Reconcile the measured dimensions with the this view's constraints and
         // set the final measured width and height.
