@@ -46,7 +46,7 @@ class WdiView @JvmOverloads constructor(
             try {
                 fillColor = getColor(R.styleable.WdiView_fillColor,
                     ContextCompat.getColor(context, R.color.colorPrimary))
-                strokeColor = getInteger(R.styleable.WdiView_strokeColor,
+                strokeColor = getColor(R.styleable.WdiView_strokeColor,
                     ContextCompat.getColor(context, R.color.colorAccent))
                 strokePaint.strokeWidth = getFloat(R.styleable.WdiView_strokeThickness,
                     defaultStrokeWidth
